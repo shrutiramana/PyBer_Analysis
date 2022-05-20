@@ -1,14 +1,11 @@
 #	Overview of Project 
 
 ## Purpose 
-* To create a summary DataFrame of the ride-sharing data by city type.
-* City types classified as “Rural”, ‘Suburban” & “Urban”
-* A multiple-line graph that shows the total weekly fares for each city type.
+To Provide analysis on ride, driver and fare data based on the city types - Rural ,Suburban and Urban.Help in providing visualizations to Pyber so that they can predict trends and see patterns from the data analysis.
 
 ## Resources 
 Data Source - city_data.csv , ride_data.csv
 Software - Python 3.8.5, Jupiter Notebook 6.1.4
-
 Following are the steps to extract data from the csv resources provided to us.
 1. We read the city_data.csv and the ride_data.csv files and transform into data frames using Pandas. 
 2. city_data_df & ride_data_df contain information about the names of the cities & drivers  and information of the rides in each of the cities respectively.
@@ -42,8 +39,7 @@ We analyze the dataframe to get a new DataFrame  with columns -
 
 <img width="366" alt="pivot_table" src="https://user-images.githubusercontent.com/98556229/169404637-833ddebb-143f-4734-be5e-ef3e64817639.png">
 
-There are null values as some data is not present due to no rides for Rural / suburban areas as they lesser rides compared to Urban ride share data.
- We create a new DataFrame with using Resample on weeks for each week . 
+There are null values in the dataframe because some data is not present due to no rides in some city types during those dates. We create a new DataFrame with using Resample on weeks for each week . 
  
 
 The data from this DataFrame was then used to create the map, using df.plot()
@@ -71,17 +67,18 @@ Below is the summary dataframe - pyber_summary_df
 
 Observations - 
 1. Total Fares earned in “Urban cities” is  $39,854.38 is 2 times that of the “Suburban cities” which is $19,356.33 showing they have the highest demand
-2. Similar to total fares there is a huge disparity between the total rides for Rural and Urban cities (almost 9 times ) and Suburban to urban cities .(almost 2 times)
+2. Similar to total fares there is a huge disparity between the total rides for Rural and Urban cities (almost 9 times ) and Suburban to urban cities (almost 2 times).
 3. Comparing Total Drivers in each city - Rural is 78  whereas Urban cities is 2405 which is almost 30 times of Rural cities, & 5 times of Suburban cities.
 4. Its also evident that Average Fare per driver is very less in Urban when compare to Rural / Suburban cities. 
 5. Rural cities have highest average Fare per ride.
-6. So it shows a relationship where Revenue and driver varies high or low with type of city and while average fare per driver is inversely proportional.
+6. The data shows a relationship where Revenue and driver varies high or low with type of city, while average fare per driver is inversely proportional.
 
-Based on the analysis my business recommendations to Pyber are:
- Increasing the amount of drivers in Rural areas to ensure there are enough drivers to meet ride demand. 
-  Data for rural cities shows that the average fare per ride and average fare per driver is much higher than Suburban and urban cities.This can indicate that rural area based riders are taking trips over a longer distance. This can result in a majority of drivers being occupied with current trips and loss in potential revenue when there are peaks in business.
+## Summary
 
-Summary
-Based on the analysis my business recommendations to Pyber are: Increasing the amount of drivers in Rural areas to ensure there are enough drivers to meet ride demand. Data for rural cities shows that the average fare per ride and average fare per driver is much higher than Suburban and urban cities.This can indicate that rural area based riders are taking trips over a longer distance. This can result in a majority of drivers being occupied with current trips and loss in potential revenue when there are peaks in business.
+1. Since "Total Drivers" is fewer in Rural and Suburban may be giving more perks or some kind of incentives to encourage them to take up the Driver post at the PyBer rideshare will help increase the overall totals of Drivers.
+
+2. With #1 as more Drivers take up , the “Total Rides” will also increase and improve in the Rural and Suburban cities and the “Total Fares” will improves cause decreasing the “Average Fare per Ride”, which will be great win for both customer and the company. Less rides could be reason due to longer rides or bad road conditions etc. 
+
+3. Also, “Average Fare per Driver” is pretty low for Urban cities compared to Rural and Suburban cities, so if we provide some extra incentive or extra pay for the extra rides they are doing to increase the Revenue of the company.
 
 
